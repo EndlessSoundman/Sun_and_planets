@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #333;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@keyframes orbiting {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#system {
+	height: 700px;
+	width: 700px;
+	position: relative;
+}
+
+#sun {
+	background-color: #ffcc00;
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	top: calc(50% - 30px);
+	left: calc(50% - 30px);
+	border-radius: 60%;
+}
+
+#mercury {
+	border: 1px solid #555;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	top: calc(50% - 150px);
+	left: calc(50% - 150px);
+	border-radius: 50%;
+	animation: orbiting 24s linear infinite;
+}
+
+#mercury > div {
+	--radius: 10px;
+	background-color: #190033;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#venus {
+	border: 1px solid #555;
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	top: calc(50% - 200px);
+	left: calc(50% - 200px);
+	border-radius: 50%;
+	animation: orbiting 20s linear infinite;
+}
+
+#venus > div {
+	--radius: 30px;
+	background-color: #660000;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#earth {
+	border: 1px solid #555;
+	height: 500px;
+	width: 500px;
+	position: absolute;
+	top: calc(50% - 250px);
+	left: calc(50% - 250px);
+	border-radius: 50%;
+	animation: orbiting 30s linear infinite;
+}
+
+#earth > div {
+	--radius: 20px;
+	background-color: #0000ff;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#mars {
+	border: 1px solid #555;
+	height: 600px;
+	width: 600px;
+	position: absolute;
+	top: calc(50% - 300px);
+	left: calc(50% - 300px);
+	border-radius: 50%;
+	animation: orbiting 40s linear infinite;
+}
+
+#mars > div {
+	--radius: 15px;
+	background-color: #ff0000;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
